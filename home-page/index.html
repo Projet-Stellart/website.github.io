@@ -1,138 +1,398 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zxx">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>Stellart Atria</title>
-  <link rel="icon" href="../icon.ico" type="image/x-icon">
-
-  <!-- Particle.js library -->
-  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-
-  <!-- Include Custom Font -->
-  <style>
-    @font-face {
-      font-family: 'Drius';
-      src: url('drius.ttf') format('truetype'); /* Adjust the path and format as needed */
-      font-weight: normal;
-      font-style: normal;
-    }
-
-    body {
-      margin: 0;
-      overflow: hidden;
-      font-family: 'Drius', 'Helvetica', sans-serif; /* Use the custom font or fallback to Helvetica */
-      background-color: rgb(0, 0, 0); /* Set a fallback background color */
-      color: #ffffff; /* Set text color */
-      background-image: url("../background-image.jpg") ;
-      background-repeat:no-repeat;
-      background-size: cover;
-    }
-
-    #particles-js {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-    }
-
-    .load-container {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      text-align: center;
-    }
-
-    .title {
-      font-family: 'Drius', sans-serif; /* Use the custom font or fallback to sans-serif */
-      font-size: 3.8em;
-      margin-bottom: 20px;
-    }
-
-    .ml15 {
-      font-weight: 800;
-      font-size: 3.8em;
-      text-transform: uppercase;
-      letter-spacing: 0.17em;
-    }
-
-    .ml15 .word {
-      display: inline-block;
-      line-height: 1em;
-    }
-
-    /* Menu Styles */
-    .menu {
-      display: none; /* Initially hidden */
-      margin-top: 10px; /* Adjust the margin-top as needed */
-    }
-
-    .menu a {
-      display: block;
-      margin: 10px -40;
-      color: inherit;
-      text-decoration: none;
-      font-size: 1.5em;
-    }
-  </style>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Stellart Atria</title>
+    <link rel="icon" href="../assets/icon.ico" type="image/gif" sizes="100x100">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Stellart Atria - Epita S2 Game Project" name="description">
+    <meta content="" name="keywords">
+    <meta content="" name="author">
+    <!-- CSS Files
+    ================================================== -->
+    <link id="bootstrap" href="../assets/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="../assets/plugins.css" rel="stylesheet" type="text/css">
+    <link href="../assets/style.css" rel="stylesheet" type="text/css">
+    <link href="../assets/de-grey.css" rel="stylesheet" type="text/css">
+    <!-- color scheme -->
+    <link id="colors" href="../assets/scheme.css" rel="stylesheet" type="text/css">
+    <link href="../assets/coloring.css" rel="stylesheet" type="text/css">
+    </style>
 </head>
-<body>
 
-  <!-- Particle.js Container -->
-  <div id="particles-js"></div>
+<body class="dark-scheme de-grey" style="background-size: cover;">
+    <div id="wrapper" style="background-size: cover;">
+        <!-- header begin -->
+        <header class="transparent scroll-dark clone">
+            <div class="container" style="background-size: cover;">
+                <div class="row" style="background-size: cover;">
+                    <div class="col-md-12" style="background-size: cover;">
+                        <div class="de-flex sm-pt10" style="background-size: cover;">
+                            <div class="de-flex-col" style="background-size: cover;">
+                                <div class="de-flex-col" style="background-size: cover;">
+                                    <!-- logo begin -->
+                                    <div id="logo" style="background-size: cover;">
+                                        <a href="../home-page/index.html">
+                                            <img alt="" src="../assets/logo-light.png">
+                                        </a>
+                                    </div>
+                                    <!-- logo close -->
+                                </div>
+                                <div class="de-flex-col" style="background-size: cover;">
+                                    <input id="quick_search" class="xs-hide style-2" name="quick_search"
+                                        placeholder="search assets here..." type="text">
+                                </div>
+                            </div>
+                            <div class="de-flex-col header-col-mid" style="background-size: cover;">
+                                <div id="menu-container"></div>
+                                <div class="menu_side_area" style="background-size: cover;">
+                                    <a href=""
+                                        class="btn-main btn-wallet"><i
+                                            class="icon_wallet_alt"></i><span>Account</span></a>
+                                    <span id="menu-btn"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- header close -->
+        <!-- menu begin -->
+        <script>
+            fetch('../common/main-menu.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('menu-container').innerHTML = data;
+                })
+                .catch(error => console.error('Error fetching header:', error));
+        </script>
+        <!-- menu close -->
+        <!-- content begin -->
+        <div class="no-bottom no-top" id="content" style="background-size: cover;">
+            <div id="top" style="background-size: cover;"></div>
+            <section id="section-hero" aria-label="section" class="pt20 pb20 vh-100"
+                data-bgimage="url(../assets/background.jpg) bottom"
+                style="background: url(&quot;images/background/8.jpg&quot;) center bottom / cover;">
+                <div id="particles-js" style="background-size: cover;"><canvas class="particles-js-canvas-el"
+                        style="width: 100%; height: 100%;" width="1897" height="958"></canvas></div>
+                <div class="v-center" style="background-size: cover;">
+                    <div class="container" style="background-size: cover;">
+                        <div class="row align-items-center" style="background-size: cover;">
+                            <div class="col-md-6" style="background-size: cover;">
+                                <div class="spacer-single" style="background-size: cover;"></div>
+                                <h6 class="wow fadeInUp animated" data-wow-delay=".5s"
+                                    style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInUp;"><span
+                                        class="text-uppercase id-color-2">Project Atria</span></h6>
+                                <div class="spacer-10" style="background-size: cover;"></div>
+                                <h1 class="wow fadeInUp animated" data-wow-delay=".75s"
+                                    style="visibility: visible; animation-delay: 0.75s; animation-name: fadeInUp;">A fps
+                                    like you've never seen before</h1>
+                                <p class="wow fadeInUp lead animated" data-wow-delay="1s"
+                                    style="visibility: visible; animation-delay: 1s; animation-name: fadeInUp;">
+                                    Set in a dynamic universe, blending innovative gameplay mechanics with immersive
+                                    storytelling and customizable character experiences</p>
+                                <div class="spacer-10" style="background-size: cover;"></div>
+                                <a href="https://github.com/Projet-Stellart/Atria/archive/refs/tags/release-v0.1.zip"
+                                    class="btn-main wow fadeInUp lead animated" data-wow-delay="1.25s"
+                                    style="visibility: visible; animation-delay: 1.25s; animation-name: fadeInUp;">Download
+                                    Now</a>
+                                <div class="row" style="background-size: cover;">
+                                    <div class="spacer-single" style="background-size: cover;"></div>
+                                    <div class="row" style="background-size: cover;">
+                                        <div class="col-lg-4 col-md-6 col-sm-4 wow fadeInRight mb30 animated"
+                                            data-wow-delay="1.1s"
+                                            style="background-size: cover; visibility: visible; animation-delay: 1.1s; animation-name: fadeInRight;">
+                                            <div class="de_count text-left" style="background-size: cover;">
+                                                <h3><span>94215</span></h3>
+                                                <h5 class="id-color">Players</h5>
+                                            </div>
+                                        </div>
 
-  <!-- Centered Title with Animation -->
-  <div class="load-container">
-    <h1 class="ml15 title">
-      <span class="word">Project</span>
-      <span class="word">Atria</span>
-    </h1>
-  </div>
+                                        <div class="col-lg-4 col-md-6 col-sm-4 wow fadeInRight mb30 animated"
+                                            data-wow-delay="1.4s"
+                                            style="background-size: cover; visibility: visible; animation-delay: 1.4s; animation-name: fadeInRight;">
+                                            <div class="de_count text-left" style="background-size: cover;">
+                                                <h3><span>27</span>k</h3>
+                                                <h5 class="id-color">Games Played</h5>
+                                            </div>
+                                        </div>
 
-  <!-- Menu Section -->
-  <div class="menu-container" display="block">
-    <div class="menu" id="menu">
-      <a href="#">Home</a>
-      <a href="#">About</a>
-      <a href="#">Services</a>
-      <a href="#">Contact</a>
+                                        <div class="col-lg-4 col-md-6 col-sm-4 wow fadeInRight mb30 animated"
+                                            data-wow-delay="1.7s"
+                                            style="background-size: cover; visibility: visible; animation-delay: 1.7s; animation-name: fadeInRight;">
+                                            <div class="de_count text-left" style="background-size: cover;">
+                                                <h3><span>4</span>k</h3>
+                                                <h5 class="id-color">Maps Generated</h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 xs-hide" style="background-size: cover;">
+                                <img src="../assets/title-picture.png" class="img-fluid wow fadeInUp animated"
+                                    data-wow-delay=".75s" alt=""
+                                    style="visibility: visible; animation-delay: 0.75s; animation-name: fadeInUp;">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="section-collections" class="pt30 pb30" style="background-size: cover;">
+                <div class="container" style="background-size: cover;">
+
+                    <div class="row wow fadeIn animated"
+                        style="background-size: cover; visibility: visible; animation-name: fadeIn;">
+                        <div class="col-lg-12" style="background-size: cover;">
+                            <h2 class="style-2">More about us</h2>
+                        </div>
+                        <p>
+                            In a context where the quality of multiplayer experiences in games seems to be declining,
+                            our team has taken on the challenge of transforming and revitalizing the current landscape
+                            of video games. While Battle Royales and MOBAs have dominated in recent years, there is an
+                            opening for a renaissance of the FPS, the iconic genre that has influenced players so much.
+                        </p>
+                        <p>
+                            The concept we propose is much more than just a team-based FPS, it takes place in the cosmic
+                            vastness, a mysterious and captivating environment where each session promises to be unique.
+                            One of our major innovations lies in the design of the map. Instead of having a fixed
+                            battlefield, we have opted for a map that changes with each game. This procedural approach
+                            offers unparalleled variety, with each match providing a new adventure, a different strategy
+                            to develop, and new challenges to overcome.
+                        </p>
+                        <p>
+                            By choosing a futuristic and spatial setting, we can also introduce unprecedented gameplay
+                            mechanics, blending zero gravity or cutting-edge technologies. Genre enthusiasts, familiar
+                            with more classic mechanics, will discover a renewed experience while remaining rooted in
+                            the FPS's foundations.
+                        </p>
+                        <p>
+                            This project is more than just a game; it is a bold exploration into the uncharted
+                            possibilities of FPS, a journey towards new gameplay horizons, and a surprise with each new
+                            session. It is our way of envisioning the future of interactive entertainment, combining
+                            tradition and modernity, comfort and discovery.
+                        </p>
+                    </div>
+
+                    <div class="spacer-single" style="background-size: cover;"></div>
+
+                    <div class="row" style="background-size: cover;">
+                        <div class="col-lg-12" style="background-size: cover;">
+                            <h2 class="style-2">The team</h2>
+                        </div>
+                        <div id="collection-carousel-alt" class="owl-carousel wow fadeIn owl-loaded owl-drag animated"
+                            style="background-size: cover; visibility: visible; animation-name: fadeIn;">
+
+                            <div class="owl-stage-outer" style="background-size: cover;">
+                                <div class="owl-stage"
+                                    style="transform: translate3d(-1321px, 0px, 0px); transition: all 0s ease 0s; width: 4228px; background-size: cover;">
+                                    <div class="owl-item cloned"
+                                        style="width: 239.2px; margin-right: 25px; background-size: cover;">
+                                        <div class="nft_coll style-2" style="background-size: cover;">
+                                            <div class="nft_wrap" style="background-size: cover;">
+                                                <a
+                                                    href="/member-page/matteo.html"><img
+                                                        src="../team-assets/matteo-dupond.png" class="lazy img-fluid" alt=""></a>
+                                            </div>
+                                            <div class="nft_coll_pp" style="background-size: cover;">
+                                                <p class="spacer-20"></p>
+                                                
+                                            </div>
+                                            <div class="nft_coll_info" style="background-size: cover;">
+                                                <a
+                                                    href="">
+                                                    <h4>Matteo Dupond</h4>
+                                                </a>
+                                                <span>Head of team</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="owl-item cloned"
+                                        style="width: 239.2px; margin-right: 25px; background-size: cover;">
+                                        <div class="nft_coll style-2" style="background-size: cover;">
+                                            <div class="nft_wrap" style="background-size: cover;">
+                                                <a
+                                                    href="/member-page/lilian.html"><img
+                                                        src="../team-assets/lilian-labat.png" class="lazy img-fluid" alt=""></a>
+                                            </div>
+                                            <div class="nft_coll_pp" style="background-size: cover;">
+                                                <p class="spacer-20"></p>
+                                            </div>
+                                            <div class="nft_coll_info" style="background-size: cover;">
+                                                <a
+                                                    href="/member-page/lilian.html">
+                                                    <h4>Lilian Labat</h4>
+                                                </a>
+                                                <span>Procedural Expert</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="owl-item cloned"
+                                        style="width: 239.2px; margin-right: 25px; background-size: cover;">
+                                        <div class="nft_coll style-2" style="background-size: cover;">
+                                            <div class="nft_wrap" style="background-size: cover;">
+                                                <a
+                                                    href="/member-page/guillaume.html"><img
+                                                        src="../team-assets/guillaume-dufour.png" class="lazy img-fluid" alt=""></a>
+                                            </div>
+                                            <div class="nft_coll_pp" style="background-size: cover;">
+                                                <p class="spacer-20"></p>
+                                            </div>
+                                            <div class="nft_coll_info" style="background-size: cover;">
+                                                <a
+                                                    href="/member-page/guillaume.html">
+                                                    <h4>Guillaume Dufour</h4>
+                                                </a>
+                                                <span>UI Designer</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="owl-item cloned"
+                                        style="width: 239.2px; margin-right: 25px; background-size: cover;">
+                                        <div class="nft_coll style-2" style="background-size: cover;">
+                                            <div class="nft_wrap" style="background-size: cover;">
+                                                <a
+                                                    href="/member-page/nelson.html"><img
+                                                        src="../team-assets/nelson-rudent.png" class="lazy img-fluid" alt=""></a>
+                                            </div>
+                                            <div class="nft_coll_pp" style="background-size: cover;">
+                                                <p class="spacer-20"></p>
+                                            </div>
+                                            <div class="nft_coll_info" style="background-size: cover;">
+                                                <a
+                                                    href="/member-page/nelson.html">
+                                                    <h4>Nelson Rudent</h4>
+                                                </a>
+                                                <span>Gameplay Developer</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="owl-item cloned"
+                                        style="width: 239.2px; margin-right: 25px; background-size: cover;">
+                                        <div class="nft_coll style-2" style="background-size: cover;">
+                                            <div class="nft_wrap" style="background-size: cover;">
+                                                <a
+                                                    href="/member-page/luan.html"><img
+                                                        src="../team-assets/luan-ray-chagas.png" class="lazy img-fluid" alt=""></a>
+                                            </div>
+                                            <div class="nft_coll_pp" style="background-size: cover;">
+                                                <p class="spacer-20"></p>
+                                            </div>
+                                            <div class="nft_coll_info" style="background-size: cover;">
+                                                <a
+                                                    href="/member-page/luan.html">
+                                                    <h4>Luan Ray-Chagas</h4>
+                                                </a>
+                                                <span>Networking</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            <div class="owl-dots disabled" style="background-size: cover;"></div>
+                        </div>
+                    </div>
+
+                    <div class="spacer-double" style="background-size: cover;"></div>
+
+
+                </div>
+            </section>
+
+        </div>
+        <!-- content close -->
+
+        <!-- footer begin -->
+        <footer>
+            <div class="container" style="background-size: cover;">
+                <div class="row" style="background-size: cover;">
+                    <div class="col-md-3 col-sm-6 col-xs-1" style="background-size: cover;">
+                        <div class="widget" style="background-size: cover;">
+                            <h5>References</h5>
+                            <ul>
+                                <li><a href="">Project
+                                        Specifications</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 col-xs-1" style="background-size: cover;">
+                        <div class="widget" style="background-size: cover;">
+                            <h5>Ressources</h5>
+                            <ul>
+                                <li><a
+                                        href="">Images</a>
+                                </li>
+                                <li><a
+                                        href="">Sounds</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 col-xs-1" style="background-size: cover;">
+                        <div class="widget" style="background-size: cover;">
+                            <h5></h5>
+                            <ul>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 col-xs-1" style="background-size: cover;">
+                        <div class="widget" style="background-size: cover;">
+                            <h5>Newsletter</h5>
+                            <p>Signup for our newsletter to get the latest news in your inbox.</p>
+                            <form class="row form-dark" id="form_subscribe" method="post" name="form_subscribe">
+                                <div class="col text-center" style="background-size: cover;">
+                                    <input class="form-control" id="txt_subscribe" name="txt_subscribe"
+                                        placeholder="enter your email" type="text"> <a
+                                        href=""
+                                        id="btn-subscribe"><i class="arrow_right bg-color-secondary"></i></a>
+                                    <div class="clearfix" style="background-size: cover;"></div>
+                                </div>
+                            </form>
+                            <div class="spacer-10" style="background-size: cover;"></div>
+                            <small>Your email is safe with us. We don't spam.</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="subfooter" style="background-size: cover;">
+                <div class="container" style="background-size: cover;">
+                    <div class="row" style="background-size: cover;">
+                        <div class="col-md-12" style="background-size: cover;">
+                            <div class="de-flex" style="background-size: cover;">
+                                <div class="de-flex-col" style="background-size: cover;">
+                                    <a href="">
+                                        <span class="copy">© Copyright 2024 - Stellart Atria
+                                        </span>
+                                    </a>
+                                </div>
+                                <div class="de-flex-col" style="background-size: cover;">
+                                    <div class="social-icons" style="background-size: cover;">
+                                        <a href="https://github.com/Projet-Stellart"><i
+                                                class="fa fa-github fa-lg"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- footer close -->
+
     </div>
-  </div>
 
-  <!-- Particle.js scripts -->
-  <script src="particles.js"></script>
-  <script src="js/app.js"></script>
+    <!-- Javascript Files
+    ================================================== -->
+    <script src="../assets/plugins.js.download"></script>
+    <script src="../assets/designesia.js.download"></script>
+    <script src="../assets/particles.js.download"></script>
+    <script src="../assets/particles-settings.js.download"></script>
 
-  <!-- Anime.js script -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
-  <script>
-    anime.timeline({ loop: false })
-      .add({
-        targets: '.ml15 .word',
-        scale: [14, 1],
-        opacity: [0, 1],
-        easing: "easeOutCirc",
-        duration: 800,
-        delay: (el, i) => 800 * i
-      }).add({
-        targets: '.ml15',
-        opacity: 0,
-        duration: 1000,
-        easing: "easeOutExpo",
-        delay: 1000,
-        complete: function(anim) {
-          // Show the menu after the title disappears
-          document.getElementById('menu').style.display = 'block';
-        }
-      });
-  </script>
 
-  <!-- Initialize Particle.js -->
-  <script>
-    particlesJS.load('particles-js', 'particles.json', function(){
-      console.log('particles.json loaded...');
-    });
-  </script>
 
 </body>
+
 </html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<!-- saved from url=(0070)https://madebydesignesia.com/themes/gigaland/03_grey-item-details.html -->
+<html lang="zxx">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Stellart Atria - Guillaume Dufour</title>
+    <link rel="icon" href="../assets/icon.ico" type="image/gif" sizes="100x100">
+
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Stellart Atria - Epita S2 Game Project" name="description">
+    <meta content="" name="keywords">
+    <meta content="" name="author">
+    <!-- CSS Files
+    ================================================== -->
+    <link id="bootstrap" href="../assets/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="../assets/plugins.css" rel="stylesheet" type="text/css">
+    <link href="../assets/style.css" rel="stylesheet" type="text/css">
+    <link href="../assets/de-grey.css" rel="stylesheet" type="text/css">
+    <!-- color scheme -->
+    <link id="colors" href="../assets/scheme.css" rel="stylesheet" type="text/css">
+    <link href="../assets/coloring.css" rel="stylesheet" type="text/css">
+</head>
+
+<body class="dark-scheme de-grey" style="background-size: cover;">
+    <div id="wrapper" style="background-size: cover;">
+
+        <!-- header begin -->
+        <header class="transparent border-bottom clone">
+            <div class="container" style="background-size: cover;">
+                <div class="row" style="background-size: cover;">
+                    <div class="col-md-12" style="background-size: cover;">
+                        <div class="de-flex sm-pt10" style="background-size: cover;">
+                            <div class="de-flex-col" style="background-size: cover;">
+                                <div class="de-flex-col" style="background-size: cover;">
+                                    <!-- logo begin -->
+                                    <div id="logo" style="background-size: cover;">
+                                        <a href="/home-page/index.html">
+                                            <img alt="" src="../assets/logo-3.png">
+                                        </a>
+                                    </div>
+                                    <!-- logo close -->
+                                </div>
+                            </div>
+                            <div class="de-flex-col header-col-mid" style="background-size: cover;">
+
+                                <div id="header-container"></div>
+                                <div class="menu_side_area" style="background-size: cover;">
+                                    <a href=""
+                                        class="btn-main btn-wallet"><i
+                                            class="icon_wallet_alt"></i><span>Account</span></a>
+                                    <span id="menu-btn"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- header close -->
+        <!-- menu begin -->
+        <script>
+            fetch('../common/main-menu.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('header-container').innerHTML = data;
+                })
+                .catch(error => console.error('Error fetching header:', error));
+        </script>
+        <!-- menu close -->
+
+        <!-- content begin -->
+        <div class="no-bottom no-top" id="content" style="background-size: cover;">
+            <div id="top" style="background-size: cover;"></div>
+
+
+            <section id="nft-item-details" aria-label="section" class="sm-mt-0" style="background-size: cover;">
+                <div class="container" style="background-size: cover;">
+                    <div class="row g-5" style="background-size: cover;">
+                        <div class="col-md-6 text-center" style="background-size: cover;">
+                            <div class="nft-image-wrapper" style="background-size: cover;">
+                                <img src="../team-assets/guillaume-dufour.png"
+                                    class="image-autosize img-fluid img-rounded mb-sm-30" alt=""
+                                    style="max-width: 624px;">
+                            </div>
+                        </div>
+                        <div class="col-md-6" style="background-size: cover;">
+                            <div class="item_info" style="background-size: cover;">
+                                <p class="spacer-20"></p>
+                                <h2>Guillaume Dufour</h2>
+                                <div class="item_info_counts" style="background-size: cover;">
+                                    <div class="item_info_type" style="background-size: cover;"><i
+                                            class="fa fa-image"></i>UI</div>
+                                    <div class="item_info_views" style="background-size: cover;"><i
+                                            class="fa fa-file"></i>Assets</div>
+                                </div>
+                                <p>
+                                    A student at EPITA studying computer science, Guillaume has always been passionate
+                                    about the field of computing, showing interest in both hardware and software.
+                                    Curious and determined, he possesses all the necessary qualities for the realization
+                                    of a complex video game project within a team. Despite having recently discovered
+                                    the world of programming, Guillaume demonstrates efficiency in executing complex
+                                    tasks thanks to his analytical and comprehension skills. His contribution to the
+                                    team is essential: not only has he greatly participated in drafting the
+                                    specifications, but he has also played a major role in the game's development by
+                                    providing advice, guidance, and ideas.
+                                    Guillaume is responsible for the game's User Interface (UI). This means that his
+                                    role involves designing and implementing the visual elements with which the player
+                                    interacts, such as menus, buttons, health bars, and score screens. A good UI is
+                                    essential for providing a smooth and intuitive gaming experience, greatly enhancing
+                                    player usability and immersion.
+                                </p>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+        </div>
+        </section>
+
+
+    </div>
+    <!-- content close -->
+
+
+    </div>
+    <!-- Javascript Files
+    ================================================== -->
+    <script src="../assets/plugins.js.download"></script>
+    <script src="../assets/designesia.js.download"></script>
+
+
+
+</body>
+
+</html>
